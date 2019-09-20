@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Delete Article{% endblock %}
+{% block title %}Delete Product{% endblock %}
 {% block menu %}
-    <li><a href="{% url 'article_view' article.pk %}">View</a></li>
+    <li><a href="{% url 'product_view' product.pk %}">View</a></li>
 {% endblock %}
 {% block content %}
-    <h1>Are you sure want to delete article "{{ article }}"?</h1>
-    <form method="POST" action="{% url "article_delete" article.pk %}" class="text-center" class="text-center">
+    <h1>Are you sure want to delete product "{{ product }}"?</h1>
+    <form method="POST" action="{% url "product_delete" product.pk %}" class="text-center" class="text-center">
         {% csrf_token %}
         <p><input type="submit" value="Confirm" class="btn btn-danger"></p>
-        <p><a href="{% url "article_view" article.pk %}" class="btn btn-default">Cancel</a></p>
+        <p><a href="{% url "product_view" product.pk %}" class="btn btn-default">Cancel</a></p>
     </form>
 {% endblock %}

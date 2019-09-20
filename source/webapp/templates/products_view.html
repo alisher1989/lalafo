@@ -15,9 +15,9 @@
         <div>{{ product.cost }}</div>
         <div>{{ product.category }}</div>
         <p>Category: {{ product.get_category_display }}</p>
-        <p><a href="{% url 'article_view' article.pk %}">More...</a></p>
-        <p><a href="{% url 'article_update' article.pk %}">Edit...</a></p>
-        <p><a href="{% url 'article_delete' article.pk %}">Delete</a></p>
+        <p><a href="{% url 'product_view' product.pk %}">More...</a></p>
+        <p><a href="{% url 'product_edit' product.pk %}">Edit...</a></p>
+        <p><a href="{% url 'product_delete' product.pk %}">Delete</a></p>
         <hr/>
     {% endfor %}
 {% endblock %}

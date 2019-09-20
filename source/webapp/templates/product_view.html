@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block product %}{{ product.name }}{% endblock %}
 {% block menu %}
-    <li><a href="{% url 'article_update' product.pk %}">Edit</a></li>
-    <li><a href="{% url 'article_delete' product.pk %}">Delete</a></li>
+    <li><a href="{% url 'product_edit' product.pk %}">Edit</a></li>
+    <li><a href="{% url 'product_delete' product.pk %}">Delete</a></li>
 {% endblock %}
 
 {% block content%}
