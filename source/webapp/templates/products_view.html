@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block menu %}
-    <li><a href="{% url 'article_add' %}">Add article</a></li>
-    <li><form class="form-inline my-2 my-lg-0" action="{% url 'index' %}">
+    <li><a href="{% url 'add_view' %}">Add article</a></li>
+    <li><form class="form-inline my-2 my-lg-0" action="{% url 'products_view' %}">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form></li>

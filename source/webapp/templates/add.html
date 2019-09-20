@@ -2,7 +2,7 @@
 {% block title %}Add product{% endblock %}
 {% block content %}
     <h1>Add product</h1>
-    <form method="POST" action="{% url 'edit_view' %}">
+    <form method="POST" action="{% url 'add_view' %}">
         {% include 'partial/product_form.html' with button_text="Create" %}
     </form>
 {% endblock %}
