@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block product %}{{ product.name }}{% endblock %}
+{% block menu %}
+    <li><a href="{% url 'article_update' product.pk %}">Edit</a></li>
+    <li><a href="{% url 'article_delete' product.pk %}">Delete</a></li>
+{% endblock %}
+
+{% block content%}
+    <h1>{{ product.name }}</h1>
+    <p>Category: {{ product.get_category_display }}</p>
+    <div class="pre">{{ product.description }}</div>
+{% endblock %}
